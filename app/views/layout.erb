@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Flickr Clone</h1>
+    <a href="/">Home</a>
+    <% if !session[:id].nil? %>
+      <a href="/photos/new">Upload a new photo</a>
+      <a href="/logout">Log Out</a>
+    <% else %>
+      <a href="/login">Log In or Create a New Account </a>
+    <% end %>
+  <%= yield %>
+</div>
+</body>
+</html>

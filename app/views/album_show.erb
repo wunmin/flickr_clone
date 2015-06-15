@@ -1,0 +1,8 @@
+<h2>All photos in album <%= @album.name %></h2>
+
+<% @album.photos.each do |photo| %>
+  <a href="/albums/<%= @album.id %>/photos/<%= photo.id %>"><%= photo.title %>
+  <br/><br/>
+  <img src="<%= photo.file.url %>">
+  <br/><br/></a>
+<% end %>

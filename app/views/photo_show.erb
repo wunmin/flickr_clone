@@ -1,0 +1,5 @@
+<h3>Title: </h3><%= @photo.title %>
+<h3>Description: </h3><%= @photo.photo_desc %>
+<h3>From album: </h3><%= @photo.album.name %>
+<br/><br/>
+<img src="<%= @photo.file.url %>">

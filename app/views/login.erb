@@ -1,0 +1,19 @@
+<p>Please log in!</p>
+<form action="/login" method="POST">
+  Username: <input type="text" name="user[username]">
+  <br/><br/>
+  Password: <input type="text" name="user[password]">
+  <br/><br/>
+  <input type="submit" value="Login">
+</form>
+
+<p>Or if you don't have an account yet... create a new account!</p>
+<form action="/new_user" method="POST">
+  Username: <input type="text" name="new_user[username]" value="<%= @user.username%>">
+  <br/><br/>
+  Password: <input type="text" name="new_user[password]" value="<%= @user.password %>">
+  <br/><br/>
+  Name: <input type="text" name="new_user[name]" value="<%= @user.name %>">
+  <br/><br/>
+  <input type="submit" value="Create new account">
+</form>
